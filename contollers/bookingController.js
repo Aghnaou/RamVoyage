@@ -1,6 +1,7 @@
-const stripe = require('stripe')(
-  'sk_test_51PdwjWRr1P63D3kA4f1hlwKarmUXbRFQEdYbyO2BFGG3xTTMradIbRNpvEsz6jNS9kKr9ZYnfBeMSEE9S3H5jZnq00JAlaJ14Q'
-); // i have to use the const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); but it didn't work
+const stripeSecretKey = process.env.stripeSecretKey;
+// console.log('Stripe Secret Key:', stripeSecretKey); // Log the key to verify
+const stripe = require('stripe')(stripeSecretKey);
+// i have to use the const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); but it didn't work
 const Tour = require('../models/tourmodel');
 const Booking = require('../models/bookingmodel');
 const catchAsync = require('../utils/catchAsync');
@@ -9,7 +10,8 @@ const factory = require('./handlerFactory');
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get the currently booked tour
   const tour = await Tour.findById(req.params.tourId);
-  console.log(tour);
+  // console.log(tour);
+  // console.log(process.env.STRIPE_SECRET_KEY);
 
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
