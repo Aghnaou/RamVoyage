@@ -3,12 +3,12 @@
 }
 
 ::-moz-selection {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
 }
 
 ::selection {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
 }
 
@@ -104,7 +104,7 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
 }
 .alert--success {
-  background-color: #20bf6b;
+  background-color: #c2002f;
 }
 .alert--error {
   background-color: #eb4d4b;
@@ -118,10 +118,10 @@ body {
     linear,
     left top,
     right top,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#c2002f)
   );
-  background-image: linear-gradient(to right, #7dd56f, #28b487);
+  background-image: linear-gradient(to right, #c2002f, #c2002f);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.1rem;
@@ -161,8 +161,8 @@ body {
   );
   background-image: linear-gradient(
     to bottom right,
-    rgba(125, 213, 111, 0.85),
-    rgba(40, 180, 135, 0.85)
+    rgba(216, 68, 68, 0.85),
+    rgba(236, 75, 75, 0.85)
   );
 }
 
@@ -219,7 +219,7 @@ body {
 
 .btn:focus {
   outline: none;
-  background-color: #2e864b;
+  background-color: #c2002f;
 }
 
 .btn--white {
@@ -231,11 +231,11 @@ body {
 }
 
 .btn--green {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
 }
 .btn--green::after {
-  background-color: #55c57a;
+  background-color: #c2002f;
 }
 
 .btn--small {
@@ -246,7 +246,7 @@ body {
 .btn-small,
 .btn-small:link,
 .btn-small:visited {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
   font-size: 1.4rem;
   padding: 1.25rem 3rem;
@@ -262,22 +262,22 @@ body {
 }
 
 .btn-small:hover {
-  background-color: #7dd56f;
+  background-color: #c2002f;
 }
 
 .btn-text:link,
 .btn-text:visited {
-  color: #55c57a;
+  color: #c2002f;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #c2002f;
   padding: 3px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -294,7 +294,7 @@ body {
 
 .btn-text:focus {
   outline: none;
-  outline: 3px solid #55c57a;
+  outline: 3px solid #c2002f;
   outline-offset: 3px;
 }
 
@@ -372,8 +372,8 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#e04747)
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   opacity: 0.85;
@@ -483,7 +483,7 @@ body {
 .overview-box__icon {
   height: 2.25rem;
   width: 2.25rem;
-  fill: #55c57a;
+  fill: #c2002f;
 }
 .overview-box__label {
   font-weight: 700;
@@ -581,10 +581,10 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#de4242)
   );
-  background: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background: linear-gradient(to right bottom, #c2002f, #c2002f);
   clip-path: polygon(
     0 var(--section-rotate),
     100% 0,
@@ -719,10 +719,10 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#f34646)
   );
-  background: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background: linear-gradient(to right bottom, #c2002f, #c2002f);
   z-index: 10;
   -webkit-transform: translate(-35%, -50%);
   transform: translate(-35%, -50%);
@@ -776,8 +776,8 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#ea3e3e)
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   padding: 4rem 0;
@@ -842,7 +842,7 @@ body {
 }
 .footer__nav a:hover,
 .footer__nav a:active {
-  color: #55c57a;
+  color: #c2002f;
 }
 .footer__copyright {
   justify-self: end;
@@ -1112,8 +1112,8 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#c2002f),
+    to(#f23e3e)
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   opacity: 0.7;
@@ -1159,7 +1159,7 @@ body {
 .card__icon {
   height: 2rem;
   width: 2rem;
-  fill: #55c57a;
+  fill: #c2002f;
 }
 .card__footer {
   background-color: #f7f7f7;
@@ -1253,7 +1253,7 @@ body {
 }
 .form__input:focus {
   outline: none;
-  border-bottom: 3px solid #55c57a;
+  border-bottom: 3px solid #c2002f;
 }
 .form__input:focus:invalid {
   border-bottom: 3px solid #ff7730;
@@ -1300,22 +1300,22 @@ body {
 }
 
 .form__upload:focus + label {
-  outline: 3px solid #55c57a;
+  outline: 3px solid #c2002f;
   outline-offset: 3px;
 }
 
 .form__upload + label {
-  color: #55c57a;
+  color: #c2002f;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #c2002f;
   padding: 3px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
 }
 .form__upload + label:hover {
-  background-color: #55c57a;
+  background-color: #c2002f;
   color: #fff;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
