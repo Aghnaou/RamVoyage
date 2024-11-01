@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -27,7 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 // a middlware that allows us to get to the public reposetry where we have the html css and js (front end)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set security HTTP headers
+//Set security HTTP headers
 // app.use(helmet());
 // app.use(
 //   helmet.contentSecurityPolicy({
@@ -40,24 +41,37 @@ app.use(express.static(path.join(__dirname, 'public')));
 //   })
 // );
 
-// Set security HTTP headers
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: [
-        "'self'",
-        "'unsafe-inline'",
-        'https://js.stripe.com',
-        'https://api.mapbox.com',
-      ],
-      connectSrc: ["'self'", 'ws://127.0.0.1:50343', 'ws://127.0.0.1:61754'],
-      frameSrc: ["'self'", 'https://js.stripe.com'],
-      workerSrc: ["'self'", 'blob:'], // Allow workers from blob URLs
-      // Add other directives as needed
-    },
-  })
-);
+// Allow CORS requests from http://localhost:3000
+//Set security HTTP headers
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: [
+//         "'self'",
+//         "'unsafe-inline'",
+//         'https://js.stripe.com',
+//         'https://api.mapbox.com',
+//       ],
+//       connectSrc: [
+//         "'self'",
+//         'http://127.0.0.1:3000', // Allow API requests to this address
+//         'ws://127.0.0.1:50343',
+//         'ws://127.0.0.1:61754',
+//       ],
+//       frameSrc: ["'self'", 'https://js.stripe.com'],
+//       workerSrc: ["'self'", 'blob:'], // Allow workers from blob URLs
+//       // Add other directives as needed
+//     },
+//   })
+// );
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {

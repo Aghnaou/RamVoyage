@@ -142,7 +142,7 @@ body {
 
 .heading-primary,
 .heading-tertirary {
-  color: #fff;
+  color: #0a0a0a;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -299,7 +299,7 @@ body {
 }
 
 .header {
-  background-color: #444;
+  background-color: #c2002f;
   padding: 0 5rem;
   height: 8rem;
   position: relative;
@@ -323,7 +323,7 @@ body {
   }
 }
 .header__logo img {
-  height: 7rem;
+  height: 7.5rem;
 }
 @media only screen and (max-width: 62.5em) {
   .header__logo {
@@ -1116,7 +1116,7 @@ body {
     to(#f23e3e)
   );
   background-image: linear-gradient(to right bottom, #c2002f, #dec3c3);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 .card__picture-img {
   -o-object-fit: cover;
